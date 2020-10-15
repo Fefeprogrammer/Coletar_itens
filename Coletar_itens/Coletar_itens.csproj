@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Colisao.cs" />
+    <Compile Include="Classes\controleVida.cs" />
+    <Compile Include="Classes\gameOver.cs" />
+    <Compile Include="Classes\Movimento.cs" />
+    <Compile Include="Classes\nextLevel.cs" />
+    <Compile Include="Classes\Score.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +85,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pcman.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rigth.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anigif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maca_podre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apodrecendo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-over.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
