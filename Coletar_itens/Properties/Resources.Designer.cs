@@ -71,6 +71,25 @@ namespace Coletar_itens.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream audio_coleta {
+            get {
+                return ResourceManager.GetStream("audio_coleta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap com_audio {
+            get {
+                object obj = ResourceManager.GetObject("com_audio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap down {
@@ -136,6 +155,16 @@ namespace Coletar_itens.Properties {
         internal static System.Drawing.Bitmap rigth {
             get {
                 object obj = ResourceManager.GetObject("rigth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sem_audio {
+            get {
+                object obj = ResourceManager.GetObject("sem_audio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

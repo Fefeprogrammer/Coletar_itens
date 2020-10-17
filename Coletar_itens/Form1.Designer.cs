@@ -29,9 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Coleta));
             this.lb_score = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btn_reload = new System.Windows.Forms.Button();
+            this.lb_level = new System.Windows.Forms.Label();
+            this.lb_tempo = new System.Windows.Forms.Label();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.menu = new System.Windows.Forms.GroupBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_sair = new System.Windows.Forms.Button();
+            this.btn_audio = new System.Windows.Forms.Button();
             this.game_over = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -45,11 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_reload = new System.Windows.Forms.Button();
-            this.lb_level = new System.Windows.Forms.Label();
-            this.lb_tempo = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.game_over)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -84,6 +90,90 @@
             // 
             this.timer2.Interval = 10000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // btn_reload
+            // 
+            this.btn_reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reload.Location = new System.Drawing.Point(293, 323);
+            this.btn_reload.Name = "btn_reload";
+            this.btn_reload.Size = new System.Drawing.Size(230, 46);
+            this.btn_reload.TabIndex = 14;
+            this.btn_reload.Text = "Jogar novamente";
+            this.btn_reload.UseVisualStyleBackColor = true;
+            this.btn_reload.Visible = false;
+            this.btn_reload.Click += new System.EventHandler(this.btn_reload_Click);
+            // 
+            // lb_level
+            // 
+            this.lb_level.AutoSize = true;
+            this.lb_level.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_level.Location = new System.Drawing.Point(616, 15);
+            this.lb_level.Name = "lb_level";
+            this.lb_level.Size = new System.Drawing.Size(83, 25);
+            this.lb_level.TabIndex = 15;
+            this.lb_level.Text = "Level: ";
+            // 
+            // lb_tempo
+            // 
+            this.lb_tempo.AutoSize = true;
+            this.lb_tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tempo.Location = new System.Drawing.Point(305, 15);
+            this.lb_tempo.Name = "lb_tempo";
+            this.lb_tempo.Size = new System.Drawing.Size(97, 25);
+            this.lb_tempo.TabIndex = 16;
+            this.lb_tempo.Text = "Tempo: ";
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1000;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 500;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // menu
+            // 
+            this.menu.Controls.Add(this.btn_voltar);
+            this.menu.Controls.Add(this.btn_sair);
+            this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu.Location = new System.Drawing.Point(323, 126);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(200, 180);
+            this.menu.TabIndex = 17;
+            this.menu.TabStop = false;
+            this.menu.Text = "Menu";
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(25, 33);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(157, 51);
+            this.btn_voltar.TabIndex = 1;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // btn_sair
+            // 
+            this.btn_sair.Location = new System.Drawing.Point(25, 102);
+            this.btn_sair.Name = "btn_sair";
+            this.btn_sair.Size = new System.Drawing.Size(157, 51);
+            this.btn_sair.TabIndex = 0;
+            this.btn_sair.Text = "Sair";
+            this.btn_sair.UseVisualStyleBackColor = true;
+            // 
+            // btn_audio
+            // 
+            this.btn_audio.Enabled = false;
+            this.btn_audio.Image = global::Coletar_itens.Properties.Resources.sem_audio;
+            this.btn_audio.Location = new System.Drawing.Point(12, 55);
+            this.btn_audio.Name = "btn_audio";
+            this.btn_audio.Size = new System.Drawing.Size(75, 39);
+            this.btn_audio.TabIndex = 2;
+            this.btn_audio.UseVisualStyleBackColor = true;
+            this.btn_audio.Click += new System.EventHandler(this.btn_audio_Click);
             // 
             // game_over
             // 
@@ -227,53 +317,13 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "maca";
             // 
-            // btn_reload
-            // 
-            this.btn_reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reload.Location = new System.Drawing.Point(293, 323);
-            this.btn_reload.Name = "btn_reload";
-            this.btn_reload.Size = new System.Drawing.Size(230, 46);
-            this.btn_reload.TabIndex = 14;
-            this.btn_reload.Text = "Jogar novamente";
-            this.btn_reload.UseVisualStyleBackColor = true;
-            this.btn_reload.Visible = false;
-            this.btn_reload.Click += new System.EventHandler(this.btn_reload_Click);
-            // 
-            // lb_level
-            // 
-            this.lb_level.AutoSize = true;
-            this.lb_level.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_level.Location = new System.Drawing.Point(616, 15);
-            this.lb_level.Name = "lb_level";
-            this.lb_level.Size = new System.Drawing.Size(83, 25);
-            this.lb_level.TabIndex = 15;
-            this.lb_level.Text = "Level: ";
-            // 
-            // lb_tempo
-            // 
-            this.lb_tempo.AutoSize = true;
-            this.lb_tempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tempo.Location = new System.Drawing.Point(305, 15);
-            this.lb_tempo.Name = "lb_tempo";
-            this.lb_tempo.Size = new System.Drawing.Size(97, 25);
-            this.lb_tempo.TabIndex = 16;
-            this.lb_tempo.Text = "Tempo: ";
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 1000;
-            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 500;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
             // Coleta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 460);
+            this.ClientSize = new System.Drawing.Size(879, 485);
+            this.Controls.Add(this.btn_audio);
+            this.Controls.Add(this.menu);
             this.Controls.Add(this.lb_tempo);
             this.Controls.Add(this.lb_level);
             this.Controls.Add(this.btn_reload);
@@ -291,10 +341,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Player);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Coleta";
             this.Text = "Coletar Items";
             this.Load += new System.EventHandler(this.score_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.menu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.game_over)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -336,6 +388,10 @@
         private System.Windows.Forms.Label lb_tempo;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.GroupBox menu;
+        private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.Button btn_audio;
     }
 }
 

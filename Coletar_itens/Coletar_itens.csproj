@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Colisao.cs" />
+    <Compile Include="Classes\controleMenu.cs" />
     <Compile Include="Classes\controleVida.cs" />
     <Compile Include="Classes\gameOver.cs" />
     <Compile Include="Classes\Movimento.cs" />
     <Compile Include="Classes\nextLevel.cs" />
+    <Compile Include="Classes\Pausar.cs" />
+    <Compile Include="Classes\Recarregar.cs" />
     <Compile Include="Classes\Score.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -112,6 +115,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game-over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio-coleta.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sem-audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com-audio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
