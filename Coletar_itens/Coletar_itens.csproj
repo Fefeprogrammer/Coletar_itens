@@ -55,6 +55,9 @@
     <Compile Include="Classes\Pausar.cs" />
     <Compile Include="Classes\Recarregar.cs" />
     <Compile Include="Classes\Score.cs" />
+    <Compile Include="DAO\Atualizar.cs" />
+    <Compile Include="DAO\Conexao.cs" />
+    <Compile Include="DAO\Restaurar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -32,8 +32,8 @@ namespace Coletar_itens
         bool estragando = false;
         int tempo = 20;
 
-        SoundPlayer coletaSound = new SoundPlayer(@"C:\Users\FELIPE\source\repos\Coletar_itens\Coletar_itens\Resources\audio-coleta.wav");
-
+        
+        SoundPlayer coletaSound = new SoundPlayer(Properties.Resources.audio_coleta);
        
 
         public Coleta()
@@ -70,7 +70,6 @@ namespace Coletar_itens
             if(e.KeyCode == Keys.Escape)
             {
                 Pausar pause = new Pausar(menu, timer3);
-                //btn_audio.Enabled = true;
             }
 
            if(pictureBox1.Image != podre && pictureBox2.Image != podre && pictureBox3.Image != podre
@@ -81,34 +80,10 @@ namespace Coletar_itens
                 &&
                 pictureBox10.Image != podre && pictureBox11.Image != podre)
             {
-                /*colisao.Coll(Player, pictureBox1, coletaSound);
-                colisao.Coll(Player, pictureBox2, coletaSound);
-                colisao.Coll(Player, pictureBox3, coletaSound);
-                colisao.Coll(Player, pictureBox4, coletaSound);
-                colisao.Coll(Player, pictureBox5, coletaSound);
-                colisao.Coll(Player, pictureBox6, coletaSound);
-                colisao.Coll(Player, pictureBox7, coletaSound);
-                colisao.Coll(Player, pictureBox8, coletaSound);
-                colisao.Coll(Player, pictureBox9, coletaSound);
-                colisao.Coll(Player, pictureBox10, coletaSound);
-                colisao.Coll(Player, pictureBox11, coletaSound);
-
-               
-
-                for(int i=0; i < 11; i++)
-                {
-                    colisao.Coll(Player)
-                }*/
-
                 GerarColisao();
 
                 lb_score.Text = $"Score: {colisao.x.ToString()}";
             }
-            /*else
-            {
-                gameOver over = new gameOver(Player, game_over, btn_reload);
-            }*/
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -172,8 +147,7 @@ namespace Coletar_itens
             if(level.tempo <= 0)
             {
                 timer3.Enabled = false;
-                gameOver over = new gameOver(Player, game_over, btn_reload);
-                tempo += 20;
+                gameOver over = new gameOver(Player, game_over, btn_reload, tempo.ToString());
             }
         }
 

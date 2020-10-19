@@ -11,17 +11,29 @@ namespace Coletar_itens.Classes
     {
         public void VoltarGame(GroupBox menu, Timer time)
         {
-            if(menu.Visible == true && time.Enabled == false && menu.Enabled == true)
+            menu.Enabled = true;
+
+            if(menu.Visible == true && time.Enabled == false)
             {
                 menu.Visible = false;
-                menu.Enabled = false;
                 time.Enabled = true;
+                menu.Enabled = true;
             }
             else
             {
-                menu.Enabled = true;
                 menu.Visible = true;
                 time.Enabled = false;
+                menu.Enabled = false;
+            }
+
+
+            if(menu.Visible == true)
+            {
+                menu.Enabled = true;
+            }
+            else
+            {
+                menu.Enabled = false;
             }
         }
     }

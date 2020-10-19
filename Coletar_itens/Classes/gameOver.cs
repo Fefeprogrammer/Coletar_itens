@@ -11,11 +11,12 @@ namespace Coletar_itens.Classes
     {
         public int tempo = 20;
 
-        public gameOver(PictureBox player, PictureBox gameOver, Button rec)
+        public gameOver(PictureBox player, PictureBox gameOver, Button rec, string tempo)
         {
             player.Visible = false;
             gameOver.Visible = true;
             rec.Visible = true;
+            tempo = "20";
         }
     }
 }
